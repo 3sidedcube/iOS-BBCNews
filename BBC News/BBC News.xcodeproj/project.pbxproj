@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3308683C1A9B43B400488BDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3308683B1A9B43B400488BDC /* main.m */; };
+		3308683F1A9B43B400488BDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3308683E1A9B43B400488BDC /* AppDelegate.m */; };
+		330868421A9B43B400488BDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 330868411A9B43B400488BDC /* ViewController.m */; };
+		330868451A9B43B400488BDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330868431A9B43B400488BDC /* Main.storyboard */; };
+		330868471A9B43B400488BDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330868461A9B43B400488BDC /* Images.xcassets */; };
+		3308684A1A9B43B400488BDC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330868481A9B43B400488BDC /* LaunchScreen.xib */; };
+		330868561A9B43B400488BDC /* BBC_NewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 330868551A9B43B400488BDC /* BBC_NewsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		330868501A9B43B400488BDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3308682E1A9B43B300488BDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 330868351A9B43B300488BDC;
+			remoteInfo = "BBC News";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		330868361A9B43B300488BDC /* BBC News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BBC News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3308683A1A9B43B300488BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3308683B1A9B43B400488BDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3308683D1A9B43B400488BDC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3308683E1A9B43B400488BDC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		330868401A9B43B400488BDC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		330868411A9B43B400488BDC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		330868441A9B43B400488BDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		330868461A9B43B400488BDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		330868491A9B43B400488BDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3308684F1A9B43B400488BDC /* BBC NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BBC NewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		330868541A9B43B400488BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		330868551A9B43B400488BDC /* BBC_NewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBC_NewsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		330868331A9B43B300488BDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3308684C1A9B43B400488BDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3308682D1A9B43B300488BDC = {
+			isa = PBXGroup;
+			children = (
+				330868381A9B43B300488BDC /* BBC News */,
+				330868521A9B43B400488BDC /* BBC NewsTests */,
+				330868371A9B43B300488BDC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		330868371A9B43B300488BDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				330868361A9B43B300488BDC /* BBC News.app */,
+				3308684F1A9B43B400488BDC /* BBC NewsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		330868381A9B43B300488BDC /* BBC News */ = {
+			isa = PBXGroup;
+			children = (
+				3308683D1A9B43B400488BDC /* AppDelegate.h */,
+				3308683E1A9B43B400488BDC /* AppDelegate.m */,
+				330868401A9B43B400488BDC /* ViewController.h */,
+				330868411A9B43B400488BDC /* ViewController.m */,
+				330868431A9B43B400488BDC /* Main.storyboard */,
+				330868461A9B43B400488BDC /* Images.xcassets */,
+				330868481A9B43B400488BDC /* LaunchScreen.xib */,
+				330868391A9B43B300488BDC /* Supporting Files */,
+			);
+			path = "BBC News";
+			sourceTree = "<group>";
+		};
+		330868391A9B43B300488BDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3308683A1A9B43B300488BDC /* Info.plist */,
+				3308683B1A9B43B400488BDC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		330868521A9B43B400488BDC /* BBC NewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				330868551A9B43B400488BDC /* BBC_NewsTests.m */,
+				330868531A9B43B400488BDC /* Supporting Files */,
+			);
+			path = "BBC NewsTests";
+			sourceTree = "<group>";
+		};
+		330868531A9B43B400488BDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				330868541A9B43B400488BDC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		330868351A9B43B300488BDC /* BBC News */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 330868591A9B43B400488BDC /* Build configuration list for PBXNativeTarget "BBC News" */;
+			buildPhases = (
+				330868321A9B43B300488BDC /* Sources */,
+				330868331A9B43B300488BDC /* Frameworks */,
+				330868341A9B43B300488BDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BBC News";
+			productName = "BBC News";
+			productReference = 330868361A9B43B300488BDC /* BBC News.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3308684E1A9B43B400488BDC /* BBC NewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3308685C1A9B43B400488BDC /* Build configuration list for PBXNativeTarget "BBC NewsTests" */;
+			buildPhases = (
+				3308684B1A9B43B400488BDC /* Sources */,
+				3308684C1A9B43B400488BDC /* Frameworks */,
+				3308684D1A9B43B400488BDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				330868511A9B43B400488BDC /* PBXTargetDependency */,
+			);
+			name = "BBC NewsTests";
+			productName = "BBC NewsTests";
+			productReference = 3308684F1A9B43B400488BDC /* BBC NewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3308682E1A9B43B300488BDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "3 SIDED CUBE DESIGN Ltd";
+				TargetAttributes = {
+					330868351A9B43B300488BDC = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					3308684E1A9B43B400488BDC = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 330868351A9B43B300488BDC;
+					};
+				};
+			};
+			buildConfigurationList = 330868311A9B43B300488BDC /* Build configuration list for PBXProject "BBC News" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3308682D1A9B43B300488BDC;
+			productRefGroup = 330868371A9B43B300488BDC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				330868351A9B43B300488BDC /* BBC News */,
+				3308684E1A9B43B400488BDC /* BBC NewsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		330868341A9B43B300488BDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				330868451A9B43B400488BDC /* Main.storyboard in Resources */,
+				3308684A1A9B43B400488BDC /* LaunchScreen.xib in Resources */,
+				330868471A9B43B400488BDC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3308684D1A9B43B400488BDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		330868321A9B43B300488BDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				330868421A9B43B400488BDC /* ViewController.m in Sources */,
+				3308683F1A9B43B400488BDC /* AppDelegate.m in Sources */,
+				3308683C1A9B43B400488BDC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3308684B1A9B43B400488BDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				330868561A9B43B400488BDC /* BBC_NewsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		330868511A9B43B400488BDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 330868351A9B43B300488BDC /* BBC News */;
+			targetProxy = 330868501A9B43B400488BDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		330868431A9B43B400488BDC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				330868441A9B43B400488BDC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		330868481A9B43B400488BDC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				330868491A9B43B400488BDC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		330868571A9B43B400488BDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		330868581A9B43B400488BDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3308685A1A9B43B400488BDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "BBC News/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3308685B1A9B43B400488BDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "BBC News/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3308685D1A9B43B400488BDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BBC NewsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBC News.app/BBC News";
+			};
+			name = Debug;
+		};
+		3308685E1A9B43B400488BDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BBC NewsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBC News.app/BBC News";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		330868311A9B43B300488BDC /* Build configuration list for PBXProject "BBC News" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				330868571A9B43B400488BDC /* Debug */,
+				330868581A9B43B400488BDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		330868591A9B43B400488BDC /* Build configuration list for PBXNativeTarget "BBC News" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3308685A1A9B43B400488BDC /* Debug */,
+				3308685B1A9B43B400488BDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3308685C1A9B43B400488BDC /* Build configuration list for PBXNativeTarget "BBC NewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3308685D1A9B43B400488BDC /* Debug */,
+				3308685E1A9B43B400488BDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3308682E1A9B43B300488BDC /* Project object */;
+}
