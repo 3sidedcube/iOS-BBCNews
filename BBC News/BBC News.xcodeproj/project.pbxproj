@@ -163,6 +163,7 @@
 		3308682E1A9B43B300488BDC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TSC;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "3 SIDED CUBE DESIGN Ltd";
 				TargetAttributes = {
