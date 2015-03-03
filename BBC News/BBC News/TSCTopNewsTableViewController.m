@@ -100,5 +100,21 @@
     return cell;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    
+    if (section == 0) {
+        
+        return @"Today";
+        
+    } else if(section == 1) {
+        
+        return @"Yesterday";
+        
+    }
+    
+    return nil;
+}
+
 
 @end
