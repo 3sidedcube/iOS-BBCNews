@@ -59,6 +59,12 @@
         
         cell.imageView.image = [UIImage imageNamed:@"NewsStoryIcon"];
         
+    } else {
+        
+        cell.textLabel.text = nil;
+        cell.detailTextLabel.text = nil;
+        cell.imageView.image = nil;
+        
     }
     
     return cell;
