@@ -19,6 +19,8 @@
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         
+        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"NewsCellIdentifier"];
+        
     }
     return self;
 }
