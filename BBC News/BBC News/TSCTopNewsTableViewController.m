@@ -59,6 +59,13 @@
         
         cell.imageView.image = [UIImage imageNamed:@"NewsStoryIcon"];
         
+    } else if(indexPath.row == 1) {
+        
+        cell.textLabel.text = @"Football discrimination 'increases'";
+        cell.detailTextLabel.text = @"Incidents of discrimination in English professional and grassroots football have increased according to the anti-discrimination body Kick It Out";
+        
+        cell.imageView.image = [UIImage imageNamed:@"NewsStoryIcon"];
+        
     } else {
         
         cell.textLabel.text = nil;
