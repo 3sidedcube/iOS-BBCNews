@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TSCTopNewsTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +20,11 @@
    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    TSCTopNewsTableViewController *topNews = [[TSCTopNewsTableViewController alloc] init];
+    UINavigationController *topNewsNavigation = [[UINavigationController alloc] initWithRootViewController:topNews];
+    
+    self.window.rootViewController = topNewsNavigation;
     
     [self.window makeKeyAndVisible];
     
