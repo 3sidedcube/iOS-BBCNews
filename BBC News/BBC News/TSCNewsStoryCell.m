@@ -15,9 +15,10 @@
     self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        
+        self.detailTextLabel.numberOfLines = 3;
         
     }
     return self;
 }
+
 @end
