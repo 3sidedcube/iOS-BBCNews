@@ -17,7 +17,7 @@
 
 - (instancetype)init
 {
-    self = [super initWithStyle:UITableViewStyleGrouped];
+    self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         
         self.title = @"Top News";
@@ -116,5 +116,8 @@
     return nil;
 }
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80;
+}
 @end
