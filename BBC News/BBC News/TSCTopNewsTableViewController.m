@@ -51,7 +51,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewsCellIdentifier" forIndexPath:indexPath];
     
     cell.textLabel.text = @"Barclays annual profits fall 21%";
-    // Configure the cell...
+    cell.detailTextLabel.text = @"Barclays has reported a sharp fall in profits as it sets aside more funds to cover potential fines for misconduct.";
     
     return cell;
 }
