@@ -7,6 +7,7 @@
 //
 
 #import "TSCTopNewsTableViewController.h"
+#import "TSCNewsStoryCell.h"
 
 @interface TSCTopNewsTableViewController ()
 
@@ -19,7 +20,7 @@
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         
-        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"NewsCellIdentifier"];
+        [self.tableView registerClass:[TSCNewsStoryCell class] forCellReuseIdentifier:@"NewsCellIdentifier"];
         
     }
     return self;
@@ -47,8 +48,9 @@
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewsCellIdentifier" forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TSCNewsStoryCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewsCellIdentifier" forIndexPath:indexPath];
     
     cell.textLabel.text = @"Barclays annual profits fall 21%";
     cell.detailTextLabel.text = @"Barclays has reported a sharp fall in profits as it sets aside more funds to cover potential fines for misconduct.";
