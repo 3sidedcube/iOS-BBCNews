@@ -22,8 +22,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     TSCTopNewsTableViewController *topNews = [[TSCTopNewsTableViewController alloc] init];
+    UINavigationController *topNewsNavigation = [[UINavigationController alloc] initWithRootViewController:topNews];
     
-    self.window.rootViewController = topNews;
+    self.window.rootViewController = topNewsNavigation;
     
     [self.window makeKeyAndVisible];
     
