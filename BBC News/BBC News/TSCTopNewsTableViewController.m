@@ -20,6 +20,7 @@
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         
+        self.title = @"Top News";
         [self.tableView registerClass:[TSCNewsStoryCell class] forCellReuseIdentifier:@"NewsCellIdentifier"];
         
     }
