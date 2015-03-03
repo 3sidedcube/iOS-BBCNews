@@ -50,6 +50,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewsCellIdentifier" forIndexPath:indexPath];
     
+    cell.textLabel.text = @"Barclays annual profits fall 21%";
     // Configure the cell...
     
     return cell;
