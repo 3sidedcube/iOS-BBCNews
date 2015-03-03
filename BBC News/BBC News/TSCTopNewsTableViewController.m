@@ -17,7 +17,7 @@
 
 - (instancetype)init
 {
-    self = [super initWithStyle:UITableViewStylePlain];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         
         self.title = @"Top News";
@@ -40,12 +40,22 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 25;
+    
+    if(section == 0) {
+        
+        return 1;
+        
+    } else if(section == 1) {
+        
+        return 2;
+    }
+    
+    return 0;
 }
 
 
@@ -53,27 +63,39 @@
 {
     TSCNewsStoryCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewsCellIdentifier" forIndexPath:indexPath];
     
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
         
-        cell.textLabel.text = @"Barclays annual profits fall 21%";
-        cell.detailTextLabel.text = @"Barclays has reported a sharp fall in profits as it sets aside more funds to cover potential fines for misconduct.";
+        if (indexPath.row == 0) {
+            
+            cell.textLabel.text = @"Barclays annual profits fall 21%";
+            cell.detailTextLabel.text = @"Barclays has reported a sharp fall in profits as it sets aside more funds to cover potential fines for misconduct.";
+            
+            cell.imageView.image = [UIImage imageNamed:@"NewsStoryIconBarclays"];
+            
+        }
+    
+    }
+    
+    if (indexPath.section == 1) {
         
-        cell.imageView.image = [UIImage imageNamed:@"NewsStoryIcon"];
-        
-    } else if(indexPath.row == 1) {
-        
-        cell.textLabel.text = @"Football discrimination 'increases'";
-        cell.detailTextLabel.text = @"Incidents of discrimination in English professional and grassroots football have increased according to the anti-discrimination body Kick It Out";
-        
-        cell.imageView.image = [UIImage imageNamed:@"NewsStoryIcon"];
-        
-    } else {
-        
-        cell.textLabel.text = nil;
-        cell.detailTextLabel.text = nil;
-        cell.imageView.image = nil;
+        if(indexPath.row == 0) {
+            
+            cell.textLabel.text = @"Football discrimination 'increases'";
+            cell.detailTextLabel.text = @"Incidents of discrimination in English professional and grassroots football have increased according to the anti-discrimination body Kick It Out";
+            
+            cell.imageView.image = [UIImage imageNamed:@"NewsStoryIconFootball"];
+            
+        } else if (indexPath.row == 1) {
+            
+            cell.textLabel.text = @"Missing girl";
+            cell.detailTextLabel.text = @"Two people have been arrested in connection with the disappearance of 16-year-old Rebecca Watts from Bristol.";
+            
+            cell.imageView.image = [UIImage imageNamed:@"NewsStoryIconBecky"];
+            
+        }
         
     }
+
     
     return cell;
 }
