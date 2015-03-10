@@ -36,7 +36,7 @@
         
         TSCNewsStory *footballStory = [[TSCNewsStory alloc] init];
         footballStory.headline = @"Football discrimination 'increases'";
-        footballStory.body = @"Incidents of discrimination in English professional and grassroots football have increased according to the anti-discrimination body Kick It Out";
+        footballStory.body = @"Incidents of discrimination in English professional and grassroots football have increased according to the anti-discrimination body Kick It Out.";
         footballStory.image = [UIImage imageNamed:@"NewsStoryIconFootball"];
         
         TSCNewsStory *missingStory = [[TSCNewsStory alloc] init];
