@@ -23,6 +23,7 @@
         self.title = @"Top News";
         [self.tableView registerClass:[TSCNewsStoryCell class] forCellReuseIdentifier:@"NewsCellIdentifier"];
         
+        self.tabBarItem.image = [UIImage imageNamed:@"TopNewsTabBar"];
     }
     return self;
 }
