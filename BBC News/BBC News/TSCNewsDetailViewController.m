@@ -17,6 +17,7 @@
     if (self) {
         
         [self.tableView registerClass:[TSCNewsStoryImageCellTableViewCell class] forCellReuseIdentifier:@"ImageCellIdentifier"];
+        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"StoryCellIdentifier"];
         
     }
     return self;
@@ -47,25 +48,38 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TSCNewsStoryImageCellTableViewCell *imageCell = [tableView dequeueReusableCellWithIdentifier:@"ImageCellIdentifier" forIndexPath:indexPath];
     
     if (indexPath.section == 0) {
         
         if (indexPath.row == 0) {
             
+            TSCNewsStoryImageCellTableViewCell *imageCell = [tableView dequeueReusableCellWithIdentifier:@"ImageCellIdentifier" forIndexPath:indexPath];
+            
             imageCell.imageView.image = [UIImage imageNamed:@"NewsStoryIconBarclays"];
             
+            return imageCell;
+
+        } else if (indexPath.row == 1) {
+            
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StoryCellIdentifier" forIndexPath:indexPath];
+
+            cell.textLabel.text = @" I am the adopted mother of a baby crow that had been injured. I affectionately call her Sheryl Crow. I interacted with her constantly, hand fed her, encouraged her recovery and in the process I fell in love with this beautiful and intelligent creature. Over the summer she grew and eventually she learned to fly. Sheryl brings me gifts. My first was presented to me with her wings splayed open and head bowed. I was very ceremoniously handed a yellow foam dart from a toy gun! She refused to take the dart back as she does when we play games. I felt truly honoured. She has continued to surprise me with gifts that she finds.";
+            
+            return cell;
+            
+        } else {
+            
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StoryCellIdentifier" forIndexPath:indexPath];
+
+            cell.textLabel.text = nil;
+            
+            return cell;
+            
         }
-//        else if (indexPath.row == 1) {
-//            
-//            cell.textLabel.text = @" I am the adopted mother of a baby crow that had been injured. I affectionately call her Sheryl Crow. I interacted with her constantly, hand fed her, encouraged her recovery and in the process I fell in love with this beautiful and intelligent creature. Over the summer she grew and eventually she learned to fly. Sheryl brings me gifts. My first was presented to me with her wings splayed open and head bowed. I was very ceremoniously handed a yellow foam dart from a toy gun! She refused to take the dart back as she does when we play games. I felt truly honoured. She has continued to surprise me with gifts that she finds.";
-//            
-//        }
         
     }
     
-    
-    return imageCell;
+    return nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
