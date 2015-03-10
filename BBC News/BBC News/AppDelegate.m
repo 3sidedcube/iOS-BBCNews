@@ -22,7 +22,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    TSCNewsDetailViewController *topNews = [[TSCNewsDetailViewController alloc] init];
+    TSCTopNewsTableViewController *topNews = [[TSCTopNewsTableViewController alloc] init];
     UINavigationController *topNewsNavigation = [[UINavigationController alloc] initWithRootViewController:topNews];
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
