@@ -9,8 +9,11 @@
 #import "TSCTopNewsTableViewController.h"
 #import "TSCNewsStoryCell.h"
 #import "TSCNewsDetailViewController.h"
+#import "TSCNewsStory.h"
 
 @interface TSCTopNewsTableViewController ()
+
+@property (nonatomic, strong) NSArray *stories;
 
 @end
 
@@ -25,6 +28,23 @@
         [self.tableView registerClass:[TSCNewsStoryCell class] forCellReuseIdentifier:@"NewsCellIdentifier"];
         
         self.tabBarItem.image = [UIImage imageNamed:@"TopNewsTabBar"];
+        
+        TSCNewsStory *barclaysStory = [[TSCNewsStory alloc] init];
+        barclaysStory.headline = @"Barclays annual profits fall 21%";
+        barclaysStory.body = @"Barclays has reported a sharp fall in profits as it sets aside more funds to cover potential fines for misconduct.";
+        barclaysStory.image = [UIImage imageNamed:@"NewsStoryIconBarclays"];
+        
+        TSCNewsStory *footballStory = [[TSCNewsStory alloc] init];
+        footballStory.headline = @"Football discrimination 'increases'";
+        footballStory.body = @"Incidents of discrimination in English professional and grassroots football have increased according to the anti-discrimination body Kick It Out";
+        footballStory.image = [UIImage imageNamed:@"NewsStoryIconFootball"];
+        
+        TSCNewsStory *missingStory = [[TSCNewsStory alloc] init];
+        missingStory.headline = @"Missing girl";
+        missingStory.body = @"Two people have been arrested in connection with the disappearance of 16-year-old Rebecca Watts from Bristol.";
+        missingStory.image = [UIImage imageNamed:@"NewsStoryIconBecky"];
+        
+        self.stories = @[barclaysStory, footballStory, missingStory];
     }
     return self;
 }
@@ -48,7 +68,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section
     
-    return 3;
+    return self.stories.count;
 }
 
 
@@ -56,39 +76,19 @@
 {
     TSCNewsStoryCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewsCellIdentifier" forIndexPath:indexPath];
     
+    TSCNewsStory *story = (TSCNewsStory *)self.stories[indexPath.row];
     
-        if (indexPath.row == 0) {
-            
-            cell.textLabel.text = @"Barclays annual profits fall 21%";
-            cell.detailTextLabel.text = @"Barclays has reported a sharp fall in profits as it sets aside more funds to cover potential fines for misconduct.";
-            
-            cell.imageView.image = [UIImage imageNamed:@"NewsStoryIconBarclays"];
-            
-        } else if(indexPath.row == 1) {
-            
-            cell.textLabel.text = @"Football discrimination 'increases'";
-            cell.detailTextLabel.text = @"Incidents of discrimination in English professional and grassroots football have increased according to the anti-discrimination body Kick It Out";
-            
-            cell.imageView.image = [UIImage imageNamed:@"NewsStoryIconFootball"];
-            
-        } else if (indexPath.row == 2) {
-            
-            cell.textLabel.text = @"Missing girl";
-            cell.detailTextLabel.text = @"Two people have been arrested in connection with the disappearance of 16-year-old Rebecca Watts from Bristol.";
-            
-            cell.imageView.image = [UIImage imageNamed:@"NewsStoryIconBecky"];
-            
-        }
+    cell.textLabel.text = story.headline;
+    cell.detailTextLabel.text = story.body;
+    cell.imageView.image = story.image;
         
-
-    
     return cell;
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TSCNewsDetailViewController *newsDetail = [[TSCNewsDetailViewController alloc] init];
+    TSCNewsDetailViewController *newsDetail = [[TSCNewsDetailViewController alloc] initWithStory:self.stories[indexPath.row]];
     [self.navigationController pushViewController:newsDetail animated:YES];
 }
 
