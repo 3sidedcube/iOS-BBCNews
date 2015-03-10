@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class TSCNewsStory;
+
 @interface TSCNewsDetailViewController : UITableViewController
+
+- (id)initWithStory:(TSCNewsStory *)story;
 
 @end

@@ -8,14 +8,22 @@
 
 #import "TSCNewsDetailViewController.h"
 #import "TSCNewsStoryImageCellTableViewCell.h"
+#import "TSCNewsStory.h"
+
+@interface TSCNewsDetailViewController ()
+
+@property (nonatomic, strong) TSCNewsStory *story;
+
+@end
 
 @implementation TSCNewsDetailViewController
 
-- (instancetype)init
+- (instancetype)initWithStory:(TSCNewsStory *)story
 {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         
+        self.story = story;
         [self.tableView registerClass:[TSCNewsStoryImageCellTableViewCell class] forCellReuseIdentifier:@"ImageCellIdentifier"];
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"StoryCellIdentifier"];
         
@@ -63,7 +71,7 @@
             
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StoryCellIdentifier" forIndexPath:indexPath];
 
-            cell.textLabel.text = @" I am the adopted mother of a baby crow that had been injured. I affectionately call her Sheryl Crow. I interacted with her constantly, hand fed her, encouraged her recovery and in the process I fell in love with this beautiful and intelligent creature. Over the summer she grew and eventually she learned to fly. Sheryl brings me gifts. My first was presented to me with her wings splayed open and head bowed. I was very ceremoniously handed a yellow foam dart from a toy gun! She refused to take the dart back as she does when we play games. I felt truly honoured. She has continued to surprise me with gifts that she finds.";
+            cell.textLabel.text = self.story.body;
             
             return cell;
             
@@ -86,6 +94,9 @@
 {
     if(indexPath.row == 0) {
         return 150;
+    } else {
+        
+        CGSize constrainedSize = CGSizeMake(self.view.bounds.size.width - 12, MAXFLOAT);
     }
     
     return UITableViewAutomaticDimension;
