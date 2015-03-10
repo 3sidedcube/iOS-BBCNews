@@ -16,6 +16,7 @@
 		492D8E7D1AAF24FF00F24D88 /* TSCNewsStoryImageCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 492D8E7C1AAF24FF00F24D88 /* TSCNewsStoryImageCellTableViewCell.m */; };
 		4939C6DD1AA5BA9D00E7A3E3 /* TSCTopNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4939C6DC1AA5BA9D00E7A3E3 /* TSCTopNewsTableViewController.m */; };
 		4939C6E11AA5BFF400E7A3E3 /* TSCNewsStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4939C6E01AA5BFF400E7A3E3 /* TSCNewsStoryCell.m */; };
+		C2E35E4F1AAF504B009285F7 /* TSCNewsStory.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E35E4E1AAF504B009285F7 /* TSCNewsStory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		4939C6DC1AA5BA9D00E7A3E3 /* TSCTopNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCTopNewsTableViewController.m; sourceTree = "<group>"; };
 		4939C6DF1AA5BFF400E7A3E3 /* TSCNewsStoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCNewsStoryCell.h; sourceTree = "<group>"; };
 		4939C6E01AA5BFF400E7A3E3 /* TSCNewsStoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCNewsStoryCell.m; sourceTree = "<group>"; };
+		C2E35E4D1AAF504B009285F7 /* TSCNewsStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCNewsStory.h; sourceTree = "<group>"; };
+		C2E35E4E1AAF504B009285F7 /* TSCNewsStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCNewsStory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,7 @@
 			children = (
 				3308683D1A9B43B400488BDC /* AppDelegate.h */,
 				3308683E1A9B43B400488BDC /* AppDelegate.m */,
+				C2E35E4C1AAF5037009285F7 /* Models */,
 				4939C6E21AA5BFF900E7A3E3 /* Cells */,
 				4939C6DE1AA5BAA000E7A3E3 /* View Controllers */,
 				330868461A9B43B400488BDC /* Images.xcassets */,
@@ -145,6 +149,15 @@
 				4939C6E01AA5BFF400E7A3E3 /* TSCNewsStoryCell.m */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		C2E35E4C1AAF5037009285F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C2E35E4D1AAF504B009285F7 /* TSCNewsStory.h */,
+				C2E35E4E1AAF504B009285F7 /* TSCNewsStory.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3308683F1A9B43B400488BDC /* AppDelegate.m in Sources */,
+				C2E35E4F1AAF504B009285F7 /* TSCNewsStory.m in Sources */,
 				492D8E7D1AAF24FF00F24D88 /* TSCNewsStoryImageCellTableViewCell.m in Sources */,
 				492D8E7A1AAF0CE700F24D88 /* TSCNewsDetailViewController.m in Sources */,
 				4939C6E11AA5BFF400E7A3E3 /* TSCNewsStoryCell.m in Sources */,
