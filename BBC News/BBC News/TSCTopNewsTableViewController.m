@@ -8,6 +8,7 @@
 
 #import "TSCTopNewsTableViewController.h"
 #import "TSCNewsStoryCell.h"
+#import "TSCNewsDetailViewController.h"
 
 @interface TSCTopNewsTableViewController ()
 
@@ -41,22 +42,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
+    // Return the number of rows in the section
     
-    if(section == 0) {
-        
-        return 1;
-        
-    } else if(section == 1) {
-        
-        return 2;
-    }
-    
-    return 0;
+    return 3;
 }
 
 
@@ -64,8 +56,7 @@
 {
     TSCNewsStoryCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewsCellIdentifier" forIndexPath:indexPath];
     
-    if (indexPath.section == 0) {
-        
+    
         if (indexPath.row == 0) {
             
             cell.textLabel.text = @"Barclays annual profits fall 21%";
@@ -73,20 +64,14 @@
             
             cell.imageView.image = [UIImage imageNamed:@"NewsStoryIconBarclays"];
             
-        }
-    
-    }
-    
-    if (indexPath.section == 1) {
-        
-        if(indexPath.row == 0) {
+        } else if(indexPath.row == 1) {
             
             cell.textLabel.text = @"Football discrimination 'increases'";
             cell.detailTextLabel.text = @"Incidents of discrimination in English professional and grassroots football have increased according to the anti-discrimination body Kick It Out";
             
             cell.imageView.image = [UIImage imageNamed:@"NewsStoryIconFootball"];
             
-        } else if (indexPath.row == 1) {
+        } else if (indexPath.row == 2) {
             
             cell.textLabel.text = @"Missing girl";
             cell.detailTextLabel.text = @"Two people have been arrested in connection with the disappearance of 16-year-old Rebecca Watts from Bristol.";
@@ -95,26 +80,16 @@
             
         }
         
-    }
 
     
     return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    if (section == 0) {
-        
-        return @"Today";
-        
-    } else if(section == 1) {
-        
-        return @"Yesterday";
-        
-    }
-    
-    return nil;
+    TSCNewsDetailViewController *newsDetail = [[TSCNewsDetailViewController alloc] init];
+    [self.navigationController pushViewController:newsDetail animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
