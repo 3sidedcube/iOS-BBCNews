@@ -43,7 +43,7 @@ static TSCNewsController *sharedController = nil;
     return self;
 }
 
-- (void)getNewsStories
+- (void)getTopNewsStories
 {
     [self.requestController get:@"topStories.php" completion:^(TSCRequestResponse *response, NSError *error) {
         

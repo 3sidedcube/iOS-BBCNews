@@ -20,6 +20,9 @@
  */
 + (TSCNewsController *)sharedController;
 
-- (void)getNewsStories;
+/**
+ Gets a list of news stories from the API
+ */
+- (void)getTopNewsStories;
 
 @end
