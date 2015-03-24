@@ -81,7 +81,7 @@
     
     cell.textLabel.text = story.headline;
     cell.detailTextLabel.text = story.body;
-    cell.imageView.image = story.image;
+    cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:story.imageURL]];
         
     return cell;
 }

@@ -62,9 +62,9 @@
         if (indexPath.row == 0) {
             
             TSCNewsStoryImageCellTableViewCell *imageCell = [tableView dequeueReusableCellWithIdentifier:@"ImageCellIdentifier" forIndexPath:indexPath];
-            
-            imageCell.imageView.image = self.story.image;
-            
+                        
+            imageCell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.story.imageURL]];
+
             return imageCell;
 
         } else if (indexPath.row == 1) {
