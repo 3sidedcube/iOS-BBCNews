@@ -10,10 +10,12 @@
 #import "TSCNewsStoryCell.h"
 #import "TSCNewsDetailViewController.h"
 #import "TSCNewsStory.h"
+#import "TSCNewsController.h"
 
 @interface TSCTopNewsTableViewController ()
 
 @property (nonatomic, strong) NSArray *stories;
+@property (nonatomic, strong) TSCNewsController *newsController;
 
 @end
 
@@ -28,6 +30,8 @@
         [self.tableView registerClass:[TSCNewsStoryCell class] forCellReuseIdentifier:@"NewsCellIdentifier"];
         
         self.tabBarItem.image = [UIImage imageNamed:@"TopNewsTabBar"];
+        
+        self.newsController = [TSCNewsController sharedController];
         
         TSCNewsStory *barclaysStory = [[TSCNewsStory alloc] init];
         barclaysStory.headline = @"Barclays annual profits fall 21%";
