@@ -1,29 +1,31 @@
 //
-//  TSCNewsStoryCell.m
+//  TSCNewsStoryImageCellTableViewCell.m
 //  BBC News
 //
-//  Created by Matthew Cheetham on 03/03/2015.
+//  Created by Matthew Cheetham on 10/03/2015.
 //  Copyright (c) 2015 3 SIDED CUBE DESIGN Ltd. All rights reserved.
 //
 
-#import "TSCNewsStoryCell.h"
+#import "TSCNewsStoryImageCellTableViewCell.h"
 
-@implementation TSCNewsStoryCell
+@implementation TSCNewsStoryImageCellTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
-    self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        self.detailTextLabel.numberOfLines = 3;
+        
         
     }
+    
     return self;
 }
 
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+    self.imageView.frame = self.bounds;
 }
 
 @end

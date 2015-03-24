@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TSCTopNewsTableViewController.h"
+#import "TSCNewsDetailViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +25,10 @@
     TSCTopNewsTableViewController *topNews = [[TSCTopNewsTableViewController alloc] init];
     UINavigationController *topNewsNavigation = [[UINavigationController alloc] initWithRootViewController:topNews];
     
-    self.window.rootViewController = topNewsNavigation;
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = @[topNewsNavigation];
+    
+    self.window.rootViewController = tabBarController;
     
     [self.window makeKeyAndVisible];
     
