@@ -14,6 +14,11 @@
 @interface TSCNewsController : NSObject
 
 /**
+ A completion block that can be called when news stories are returned
+ */
+typedef void (^TSCNewsStoriesCompletion)(NSError *error, NSArray *stories);
+
+/**
  @abstract The shared instance of the news controller
  @discussion If a shared instance does not exist, one will be created and retained
  @return A shared instance
@@ -23,6 +28,6 @@
 /**
  Gets a list of news stories from the API
  */
-- (void)getTopNewsStories;
+- (void)getTopNewsStoriesWithCompletion:(TSCNewsStoriesCompletion)completion;
 
 @end

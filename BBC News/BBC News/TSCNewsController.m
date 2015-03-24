@@ -43,11 +43,12 @@ static TSCNewsController *sharedController = nil;
     return self;
 }
 
-- (void)getTopNewsStories
+- (void)getTopNewsStoriesWithCompletion:(TSCNewsStoriesCompletion)completion
 {
     [self.requestController get:@"topStories.php" completion:^(TSCRequestResponse *response, NSError *error) {
         
         if (error) {
+            completion(error, nil);
             return;
         }
         
@@ -59,6 +60,8 @@ static TSCNewsController *sharedController = nil;
             [newsStories addObject:newsStory];
             
         }
+        
+        completion(nil, newsStories);
                 
     }];
 }
