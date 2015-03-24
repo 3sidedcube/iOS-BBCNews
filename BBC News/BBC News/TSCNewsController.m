@@ -8,6 +8,7 @@
 
 #import "TSCNewsController.h"
 @import ThunderRequest;
+#import "TSCNewsStory.h"
 
 static TSCNewsController *sharedController = nil;
 
@@ -40,6 +41,26 @@ static TSCNewsController *sharedController = nil;
         
     }
     return self;
+}
+
+- (void)getNewsStories
+{
+    [self.requestController get:@"topStories.php" completion:^(TSCRequestResponse *response, NSError *error) {
+        
+        if (error) {
+            return;
+        }
+        
+        NSMutableArray *newsStories = [NSMutableArray array];
+        
+        for (NSDictionary *newsStoryDictionary in response.array) {
+            
+            TSCNewsStory *newsStory = [[TSCNewsStory alloc] initWithDictionary:newsStoryDictionary];
+            [newsStories addObject:newsStory];
+            
+        }
+                
+    }];
 }
 
 @end

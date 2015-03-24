@@ -20,4 +20,6 @@
  */
 + (TSCNewsController *)sharedController;
 
+- (void)getNewsStories;
+
 @end

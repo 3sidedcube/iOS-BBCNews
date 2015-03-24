@@ -10,8 +10,12 @@
 
 @interface TSCNewsStory : NSObject
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @property (nonatomic, copy) NSString *headline;
 @property (nonatomic, copy) NSString *body;
 @property (nonatomic, strong) UIImage *image;
+
+@property (nonatomic, strong) NSURL *imageURL;
 
 @end

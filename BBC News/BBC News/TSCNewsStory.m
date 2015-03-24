@@ -10,4 +10,17 @@
 
 @implementation TSCNewsStory
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+    self = [super init];
+    if (self) {
+        
+        self.headline = dictionary[@"headline"];
+        self.body = dictionary[@"body"];
+        self.imageURL = [NSURL URLWithString:dictionary[@"imageURL"]];
+        
+    }
+    return self;
+}
+
 @end
