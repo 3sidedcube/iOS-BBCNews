@@ -27,6 +27,7 @@ typedef void (^TSCNewsStoriesCompletion)(NSError *error, NSArray *stories);
 
 /**
  Gets a list of news stories from the API
+ @param completion The completion block to call on success or failure of loading stories
  */
 - (void)getTopNewsStoriesWithCompletion:(TSCNewsStoriesCompletion)completion;
 
