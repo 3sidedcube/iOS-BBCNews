@@ -7,9 +7,9 @@
 //
 
 #import "TSCNewsController.h"
+@import ThunderRequest;
 
 static TSCNewsController *sharedController = nil;
-
 
 @implementation TSCNewsController
 
