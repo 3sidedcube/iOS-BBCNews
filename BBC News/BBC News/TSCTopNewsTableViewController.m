@@ -31,18 +31,21 @@
         
         self.tabBarItem.image = [UIImage imageNamed:@"TopNewsTabBar"];
         
+        self.refreshControl = [UIRefreshControl new];
+        [self.refreshControl addTarget:self action:@selector(handleRefresh) forControlEvents:UIControlEventValueChanged];
+        
         
     }
     return self;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)handleRefresh
+{
+    [self.refreshControl beginRefreshing];
     
-    self.newsController = [TSCNewsController sharedController];
-
     [self.newsController getTopNewsStoriesWithCompletion:^(NSError *error, NSArray *stories) {
-       
+        
+        [self.refreshControl endRefreshing];
         if (error) {
             NSLog(@"Couldn't get stories:%@", error.localizedDescription);
             return;
@@ -52,6 +55,14 @@
         [self.tableView reloadData];
         
     }];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.newsController = [TSCNewsController sharedController];
+
+    [self handleRefresh];
 }
 
 - (void)didReceiveMemoryWarning {
