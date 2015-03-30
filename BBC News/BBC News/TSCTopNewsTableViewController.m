@@ -10,10 +10,12 @@
 #import "TSCNewsStoryCell.h"
 #import "TSCNewsDetailViewController.h"
 #import "TSCNewsStory.h"
+#import "TSCNewsController.h"
 
 @interface TSCTopNewsTableViewController ()
 
 @property (nonatomic, strong) NSArray *stories;
+@property (nonatomic, strong) TSCNewsController *newsController;
 
 @end
 
@@ -29,28 +31,27 @@
         
         self.tabBarItem.image = [UIImage imageNamed:@"TopNewsTabBar"];
         
-        TSCNewsStory *barclaysStory = [[TSCNewsStory alloc] init];
-        barclaysStory.headline = @"Barclays annual profits fall 21%";
-        barclaysStory.body = @"Barclays has reported a sharp fall in profits as it sets aside more funds to cover potential fines for misconduct.";
-        barclaysStory.image = [UIImage imageNamed:@"NewsStoryIconBarclays"];
         
-        TSCNewsStory *footballStory = [[TSCNewsStory alloc] init];
-        footballStory.headline = @"Football discrimination 'increases'";
-        footballStory.body = @"Incidents of discrimination in English professional and grassroots football have increased according to the anti-discrimination body Kick It Out";
-        footballStory.image = [UIImage imageNamed:@"NewsStoryIconFootball"];
-        
-        TSCNewsStory *missingStory = [[TSCNewsStory alloc] init];
-        missingStory.headline = @"Missing girl";
-        missingStory.body = @"Two people have been arrested in connection with the disappearance of 16-year-old Rebecca Watts from Bristol.";
-        missingStory.image = [UIImage imageNamed:@"NewsStoryIconBecky"];
-        
-        self.stories = @[barclaysStory, footballStory, missingStory];
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.newsController = [TSCNewsController sharedController];
+
+    [self.newsController getTopNewsStoriesWithCompletion:^(NSError *error, NSArray *stories) {
+       
+        if (error) {
+            NSLog(@"Couldn't get stories:%@", error.localizedDescription);
+            return;
+        }
+        
+        self.stories = stories;
+        [self.tableView reloadData];
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,7 +81,7 @@
     
     cell.textLabel.text = story.headline;
     cell.detailTextLabel.text = story.body;
-    cell.imageView.image = story.image;
+    cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:story.imageURL]];
         
     return cell;
 }

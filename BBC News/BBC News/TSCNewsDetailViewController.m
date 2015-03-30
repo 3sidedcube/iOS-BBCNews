@@ -62,9 +62,9 @@
         if (indexPath.row == 0) {
             
             TSCNewsStoryImageCellTableViewCell *imageCell = [tableView dequeueReusableCellWithIdentifier:@"ImageCellIdentifier" forIndexPath:indexPath];
-            
-            imageCell.imageView.image = [UIImage imageNamed:@"NewsStoryIconBarclays"];
-            
+                        
+            imageCell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.story.imageURL]];
+
             return imageCell;
 
         } else if (indexPath.row == 1) {
@@ -72,6 +72,8 @@
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StoryCellIdentifier" forIndexPath:indexPath];
 
             cell.textLabel.text = self.story.body;
+            cell.textLabel.numberOfLines = 0;
+            cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
             
             return cell;
             
@@ -94,9 +96,12 @@
 {
     if(indexPath.row == 0) {
         return 150;
-    } else {
         
-        CGSize constrainedSize = CGSizeMake(self.view.bounds.size.width - 12, MAXFLOAT);
+    } else if (indexPath.row == 1) {
+        
+        CGSize constrainedSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 32, MAXFLOAT);
+        CGRect bodyRect = [self.story.body boundingRectWithSize:constrainedSize options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:18]} context:nil];
+        return bodyRect.size.height + 24;
     }
     
     return UITableViewAutomaticDimension;
