@@ -47,7 +47,11 @@
         
         [self.refreshControl endRefreshing];
         if (error) {
-            NSLog(@"Couldn't get stories:%@", error.localizedDescription);
+            
+            UIAlertController *errorAlert = [UIAlertController alertControllerWithTitle:@"Sorry" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+            [errorAlert addAction:[UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleCancel handler:nil]];
+            [self presentViewController:errorAlert animated:YES completion:nil];
+            
             return;
         }
         
