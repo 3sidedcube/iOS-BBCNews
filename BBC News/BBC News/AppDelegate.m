@@ -25,10 +25,7 @@
     TSCTopNewsTableViewController *topNews = [[TSCTopNewsTableViewController alloc] init];
     UINavigationController *topNewsNavigation = [[UINavigationController alloc] initWithRootViewController:topNews];
     
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[topNewsNavigation];
-    
-    self.window.rootViewController = tabBarController;
+    self.window.rootViewController = topNewsNavigation;
     
     [self.window makeKeyAndVisible];
     
